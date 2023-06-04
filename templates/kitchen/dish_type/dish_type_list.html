@@ -1,4 +1,4 @@
-{% extends base.html %}
+{% extends "base.html" %}
 {% block content %}
   <h1>
       Dish Type List
@@ -15,13 +15,13 @@
         <th>Delete</th>
       </tr>
 
-      {% for dish_type in dishtype_list_list %}
+      {% for dish_type in dishtype_list %}
         <tr>
           <td>
               {{ dish_type.id }}
           </td>
           <td>
-              {{ dish_type.name }}
+            <a href="{% url 'kitchen:dish-type-detail' pk=dish_type.id %}">{{ dish_type.name }}</a>
           </td>
           <td>
               <a href="{% url "kitchen:dish-type-update" pk=dish_type.id %}">
