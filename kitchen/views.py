@@ -4,8 +4,8 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from kitchen.forms import DishTypeSearchForm
-from kitchen.models import Dish, DishType, Cook
+from kitchen.forms import SearchForm
+from kitchen.models import Dish, DishType, Cook, Ingredients
 
 
 # @login_required
@@ -22,6 +22,9 @@ def index(request):
     return render(request, "kitchen/index.html", context=context)
 
 
+"""Dish Types"""
+
+
 class DishTypeListView(generic.ListView):
     model = DishType
     template_name = "kitchen/dish_type/dish_type_list.html"
@@ -30,14 +33,14 @@ class DishTypeListView(generic.ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(DishTypeListView, self).get_context_data(**kwargs)
         name = self.request.GET.get("name", "")
-        context["dish_type_search_form"] = DishTypeSearchForm(
+        context["dish_type_search_form"] = SearchForm(
             initial={"name": name}
         )
         return context
 
     def get_queryset(self):
         queryset = DishType.objects.all()
-        form = DishTypeSearchForm(self.request.GET)
+        form = SearchForm(self.request.GET)
         if form.is_valid():
             return queryset.filter(name__icontains=form.cleaned_data["name"])
         return queryset
@@ -65,4 +68,49 @@ class DishTypeUpdateView(generic.UpdateView):
 
 class DishTypeDeleteView(generic.DeleteView):
     model = DishType
+    template_name = "kitchen/dish_type/dish_type_confirm_delete.html"
     success_url = reverse_lazy("kitchen:dish-type-list")
+
+
+"""ingredients"""
+
+
+class IngredientsListView(generic.ListView):
+    model = Ingredients
+    template_name = "kitchen/ingredients/ingredients_list.html"
+    paginate_by = 5
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(IngredientsListView, self).get_context_data(**kwargs)
+        name = self.request.GET.get("name", "")
+        context["ingredients_search_form"] = SearchForm(
+            initial={"name": name}
+        )
+        return context
+
+    def get_queryset(self):
+        queryset = Ingredients.objects.all()
+        form = SearchForm(self.request.GET)
+        if form.is_valid():
+            return queryset.filter(name__icontains=form.cleaned_data["name"])
+        return queryset
+
+
+class IngredientsCreateView(generic.CreateView):
+    model = Ingredients
+    fields = "__all__"
+    template_name = "kitchen/ingredients/ingredients_form.html"
+    success_url = reverse_lazy("kitchen:ingredients-list")
+
+
+class IngredientsUpdateView(generic.UpdateView):
+    model = Ingredients
+    fields = "__all__"
+    template_name = "kitchen/ingredients/ingredients_form.html"
+    success_url = reverse_lazy("kitchen:ingredients-list")
+
+
+class IngredientsDeleteView(generic.DeleteView):
+    model = Ingredients
+    template_name = "kitchen/ingredients/ingredients_confirm_delete.html"
+    success_url = reverse_lazy("kitchen:ingredients-list")

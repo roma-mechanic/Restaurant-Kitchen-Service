@@ -3,21 +3,21 @@
 {% block content %}
   <h1>
     {{ dishtype.name }}
-    <a href="{% url 'kitchen:dish-type-delete' pk=car.id %}" class="btn btn-danger link-to-page">
+    <a href="{% url 'kitchen:dish-type-delete' pk=dishtype.id %}" class="btn btn-danger link-to-page">
       Delete
     </a>
 
-    <a href="{% url 'kitchen:dish-type-update' pk=car.id %}" class="btn btn-secondary link-to-page">
+    <a href="{% url 'kitchen:dish-type-update' pk=dishtype.id %}" class="btn btn-secondary link-to-page">
       Update
     </a>
   </h1>
   <p>Dish Type: ({{ dishtype.name }})</p>
   <h1>
-    Dishs
+    Dish's
   </h1>
   <hr>
   <ul>
-    {% for dish in dish_type.dish.all %}
+    {% for dish in dishtype.dish.all %}
       <li>{{ dish.name }} ({{ dish.description }})</li>
     {% endfor %}
   </ul>
