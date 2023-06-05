@@ -75,13 +75,13 @@ class DishTypeDeleteView(generic.DeleteView):
 """ingredients"""
 
 
-class IngredientsListView(generic.ListView):
+class IngredientListView(generic.ListView):
     model = Ingredients
     template_name = "kitchen/ingredients/ingredients_list.html"
     paginate_by = 5
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        context = super(IngredientsListView, self).get_context_data(**kwargs)
+        context = super(IngredientListView, self).get_context_data(**kwargs)
         name = self.request.GET.get("name", "")
         context["ingredients_search_form"] = SearchForm(
             initial={"name": name}
@@ -96,21 +96,21 @@ class IngredientsListView(generic.ListView):
         return queryset
 
 
-class IngredientsCreateView(generic.CreateView):
+class IngredientCreateView(generic.CreateView):
     model = Ingredients
     fields = "__all__"
     template_name = "kitchen/ingredients/ingredients_form.html"
     success_url = reverse_lazy("kitchen:ingredients-list")
 
 
-class IngredientsUpdateView(generic.UpdateView):
+class IngredientUpdateView(generic.UpdateView):
     model = Ingredients
     fields = "__all__"
     template_name = "kitchen/ingredients/ingredients_form.html"
     success_url = reverse_lazy("kitchen:ingredients-list")
 
 
-class IngredientsDeleteView(generic.DeleteView):
+class IngredientDeleteView(generic.DeleteView):
     model = Ingredients
     template_name = "kitchen/ingredients/ingredients_confirm_delete.html"
     success_url = reverse_lazy("kitchen:ingredients-list")
