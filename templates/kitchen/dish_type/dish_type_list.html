@@ -4,14 +4,14 @@
 {% block content %}
   <h1>
     Dish Type List
-    <a href="{% url "kitchen:dish-type-create" %}" class="btn btn-primary link_to_page">
+    <a href="{% url "kitchen:dish-type-create" %}"  class="link_to_page btn btn-primary ">
       Create
     </a>
   </h1>
 
   <form action="" method="get" class="form-inline">
     {{ dish_type_search_form|crispy }}
-    <input type="submit" class="btn btn-secondary" value="🔍">
+    <input  type="submit" class="btn btn-secondary search_button" value="🔍">
   </form>
   {% if dishtype_list %}
     <table class="table">
