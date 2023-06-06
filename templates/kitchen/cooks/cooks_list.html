@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <h1>
+    Cooks List
+    <a href="{% url "kitchen:cook-create" %}"  class="link_to_page btn btn-primary ">
+      Create
+    </a>
+  </h1>
+
+  <form action="" method="get" class="form-inline">
+    {{ cooks_search_form|crispy }}
+    <input  type="submit" class="btn btn-secondary search_button" value="🔍">
+  </form>
+  {% if cook_list %}
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Cook username</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Year of experience</th>
+      </tr>
+
+      {% for cook in cook_list %}
+        <tr>
+          <td>
+            {{ cook.id }}
+          </td>
+          <td>
+            <a href="{% url 'kitchen:cook-detail' pk=cook.id %}">{{ cook.username }}</a>
+          </td>
+          <td>
+            {{ cook.first_name }}
+          </td>
+          <td>
+            {{ cook.last_name }}
+          </td>
+          <td>
+            {{ cook.year_of_experience }}
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+
+  {% else %}
+    <p>There are no dish types in the service.</p>
+  {% endif %}
+{% endblock %}
