@@ -9,10 +9,11 @@
     </a>
   </h1>
 
-  <form action="" method="get" class="form-inline">
+  <form action="" method="get" class="input-group mt-3">
     {{ dish_type_search_form|crispy }}
-    <input  type="submit" class="btn btn-secondary search_button" value="🔍">
+    <input  type="submit" class="btn btn-secondary search_button " value="🔍">
   </form>
+
   {% if dishtype_list %}
     <table class="table">
       <tr>

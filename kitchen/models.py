@@ -48,4 +48,7 @@ class Dish(models.Model):
         ordering = ["dish_type", "name"]
 
     def __str__(self):
-        return self.dish_type, self.name
+        return self.name
+
+    # def dish_cost(self):
+    #     return sum(cost for cost in self.ingredients.ingredient_cost())

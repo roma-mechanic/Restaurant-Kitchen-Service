@@ -2,23 +2,26 @@
 
 {% block content %}
   <h1>
-    {{ dishtype.name }}
-    <a href="{% url 'kitchen:dish-type-delete' pk=dishtype.id %}" class="btn btn-danger link-to-page">
+    Dish Type: {{ dishtype.name }}
+    <a href="{% url 'kitchen:dish-type-delete' pk=dishtype.id %}" class="btn btn-danger link_to_page">
       Delete
     </a>
 
-    <a href="{% url 'kitchen:dish-type-update' pk=dishtype.id %}" class="btn btn-secondary link-to-page">
+    <a href="{% url 'kitchen:dish-type-update' pk=dishtype.id %}" class="btn btn-secondary link_to_page">
       Update
     </a>
   </h1>
-  <p>Dish Type: ({{ dishtype.name }})</p>
   <h1>
-    Dish's
+    Dishes
   </h1>
   <hr>
-  <ul>
-    {% for dish in dishtype.dish.all %}
-      <li>{{ dish.name }} ({{ dish.description }})</li>
-    {% endfor %}
-  </ul>
+  {% if dishtype.dish_set.all %}
+    <ul>
+      {% for dish in dishtype.dish_set.all %}
+        <li><a href="{% url 'kitchen:dish-detail' pk=dish.pk %}">{{ dish.name }}</a> ({{ dish.descriptions }})</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p>There are no dishes in this dish type</p>
+  {% endif %}
 {% endblock %}

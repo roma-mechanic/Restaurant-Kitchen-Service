@@ -3,45 +3,42 @@
 
 {% block content %}
   <h1>
-    Ingredients List
-    <a href="{% url "kitchen:ingredients-create" %}" class="btn btn-primary link_to_page">
+    Dishes List
+    <a href="{% url "kitchen:dish-create" %}" class="btn btn-primary link_to_page">
       Create
     </a>
   </h1>
 
   <form action="" method="get" class="input-group mt-3">
-    {{ ingredients_search_form|crispy }}
+    {{ dish_search_form|crispy }}
     <input type="submit" class="btn btn-secondary search_button" value="🔍">
   </form>
-  {% if ingredients_list %}
+
+  {% if dish_list %}
     <table class="table">
       <tr>
         <th>ID</th>
         <th>Name</th>
         <th>Cost</th>
+        <th>Description</th>
         <th>Update</th>
         <th>Delete</th>
       </tr>
 
-      {% for ingredient in ingredients_list %}
+      {% for dish in dish_list %}
         <tr>
+          <td>{{ dish.id }}</td>
+          <td><a href="{% url 'kitchen:dish-detail' pk=dish.pk %}">{{ dish.name }}</a></td>
+          <td>{{ dish.dish_cost }}</td>
+          <td>{{ dish.descriptions }}</td>
           <td>
-            {{ ingredient.id }}
-          </td>
-          <td>
-            {{ingredient.name}}
-          </td>
-          <td>
-            {{ ingredient.ingredient_cost }}
-          </td>
-          <td>
-            <a href="{% url "kitchen:ingredients-update" pk=ingredient.id %}">
+            <a href="{% url "kitchen:dish-update" pk=dish.id %}">
               Update
             </a>
           </td>
           <td>
             <a style="color: red"
-               href="{% url "kitchen:ingredients-delete" pk=ingredient.id %}">
+               href="{% url "kitchen:dish-delete" pk=dish.id %}">
               Delete
             </a>
           </td>
@@ -50,6 +47,6 @@
     </table>
 
   {% else %}
-    <p>There are no dish types in the service.</p>
+    <p>There are no dish in the service.</p>
   {% endif %}
 {% endblock %}

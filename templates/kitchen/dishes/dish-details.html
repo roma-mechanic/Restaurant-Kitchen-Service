@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    {{ dish.name }}
+    <a href="{% url 'kitchen:dish-delete' pk=dish.id %}" class="btn btn-danger link_to_page">
+      Delete
+    </a>
+
+    <a href="{% url 'kitchen:dish-update' pk=dish.id %}" class="btn btn-secondary link_to_page">
+      Update
+    </a>
+  </h1>
+  <hr>
+  <p><strong>Dish name:</strong> {{ dish.name }}</p>
+  <p><strong>Dish type:</strong> {{ dish.dish_type }}</p>
+  <p><strong>Cost:</strong> {{ dish.dish_cost }}</p>
+  {% for cook in dish.cooks.all %}
+    <p><strong>Cook:</strong> {{ cook }}</p>
+  {% endfor %}
+  <p><strong>Description:</strong> {{ dish.descriptions }}</p>
+
+  <h4>
+    Ingredients
+  </h4>
+  <hr>
+  {% if dish.ingredients.all %}
+    <ul>
+      {% for ingredient in dish.ingredients.all %}
+        <li>{{ ingredient }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Add ingredients in this dish</p>
+  {% endif %}
+
+{% endblock %}

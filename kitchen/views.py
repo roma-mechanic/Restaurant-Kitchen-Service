@@ -1,3 +1,4 @@
+from django.contrib.admin.templatetags.admin_list import pagination
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
@@ -142,7 +143,7 @@ class CookListView(generic.ListView):
 
 class CookDetailView(generic.DetailView):
     model = Cook
-    queryset = Cook.objects.all().prefetch_related("dish__cooks")
+    # queryset = Cook.objects.all().prefetch_related("dish__cooks")
     template_name = "kitchen/cooks/cook_detail.html"
 
 
@@ -165,3 +166,54 @@ class CookDeleteView(generic.DeleteView):
     model = Cook
     template_name = "kitchen/cooks/cook_confirm_delete.html"
     success_url = reverse_lazy("kitchen:cooks-list")
+
+
+"""dishes"""
+
+
+class DishListView(generic.ListView):
+    model = Dish
+    paginate_by = 5
+    template_name = "kitchen/dishes/dishes_list.html"
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(DishListView, self).get_context_data(**kwargs)
+        name = self.request.GET.get("name", "")
+        context["dish_search_form"] = SearchForm(
+            initial={"name": name}
+        )
+        return context
+
+    def get_queryset(self):
+        queryset = Dish.objects.all()
+        form = SearchForm(self.request.GET)
+        if form.is_valid():
+            return queryset.filter(name__icontains=form.cleaned_data["name"])
+        return queryset
+
+
+class DishCreateView(generic.CreateView):
+    model = Dish
+    fields = "__all__"
+    template_name = "kitchen/create-update_form.html"
+    success_url = reverse_lazy("kitchen:dish-type-list")
+
+
+class DishDetailView(generic.DetailView):
+    model = Dish
+    template_name = "kitchen/dishes/dish-details.html"
+    queryset_1 = Dish.objects.all().prefetch_related("cooks__dish", "ingredients__dish")
+    # queryset_2 = Dish.objects.all().prefetch_related("ingredients__dish")
+
+
+class DishUpdateView(generic.UpdateView):
+    model = Dish
+    fields = "__all__"
+    template_name = "kitchen/create-update_form.html"
+    success_url = reverse_lazy("kitchen:dish-type-list")
+
+
+class DishDeleteView(generic.DeleteView):
+    model = Dish
+    template_name = "kitchen/dishes/dish_confirm_delete.html"
+    success_url = "kitchen:dish-type-list"
