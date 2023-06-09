@@ -14,7 +14,7 @@
   <hr>
   <p><strong>Dish name:</strong> {{ dish.name }}</p>
   <p><strong>Dish type:</strong> {{ dish.dish_type }}</p>
-  <p><strong>Cost:</strong> {{ dish.dish_cost }}</p>
+  <p><strong>Cost:</strong> {{ dish.ingredient_total_cost }}</p>
   {% for cook in dish.cooks.all %}
     <p><strong>Cook:</strong> {{ cook }}</p>
   {% endfor %}
@@ -27,7 +27,7 @@
   {% if dish.ingredients.all %}
     <ul>
       {% for ingredient in dish.ingredients.all %}
-        <li>{{ ingredient }}</li>
+        <li>{{ ingredient }}   (cost {{ ingredient.ingredient_cost }})</li>
       {% endfor %}
     </ul>
   {% else %}

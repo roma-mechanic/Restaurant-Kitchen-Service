@@ -1,4 +1,3 @@
-from django.contrib.admin.templatetags.admin_list import pagination
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
@@ -202,8 +201,6 @@ class DishCreateView(generic.CreateView):
 class DishDetailView(generic.DetailView):
     model = Dish
     template_name = "kitchen/dishes/dish-details.html"
-    queryset_1 = Dish.objects.all().prefetch_related("cooks__dish", "ingredients__dish")
-    # queryset_2 = Dish.objects.all().prefetch_related("ingredients__dish")
 
 
 class DishUpdateView(generic.UpdateView):

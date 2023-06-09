@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.db.models import Sum
 from django.urls import reverse
 
 
@@ -50,5 +51,14 @@ class Dish(models.Model):
     def __str__(self):
         return self.name
 
-    # def dish_cost(self):
-    #     return sum(cost for cost in self.ingredients.ingredient_cost())
+    @property
+    def ingredient_total_cost(self):
+        queryset = Dish.objects.filter(id=self.id).annotate(dish_total_cost=Sum("ingredients__ingredient_cost")).values(
+            "dish_total_cost")
+        if queryset[0]["dish_total_cost"] is not None:
+
+            return round(queryset[0]["dish_total_cost"], 2)
+
+        else:
+            return 0
+
