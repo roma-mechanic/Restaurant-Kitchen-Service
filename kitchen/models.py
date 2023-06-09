@@ -32,13 +32,12 @@ class Cook(AbstractUser):
         return f"{self.username} ({self.first_name} {self.last_name})"
 
     def get_absolute_url(self):
-        return reverse("kitchen:cook_detail", kwargs={"pk": self.pk})
+        return reverse("kitchen:cook-detail", kwargs={"pk": self.pk})
 
 
 class Dish(models.Model):
     name = models.CharField(max_length=255, unique=True)
-    descriptions = models.TextField()
-    dish_cost = models.DecimalField(max_digits=8, decimal_places=2)
+    descriptions = models.TextField(default="This is the best dish in the world ")
     dish_type = models.ForeignKey(DishType, on_delete=models.CASCADE)
     cooks = models.ManyToManyField(Cook, related_name="dish")
     ingredients = models.ManyToManyField(Ingredients, related_name="dish")
@@ -53,12 +52,15 @@ class Dish(models.Model):
 
     @property
     def ingredient_total_cost(self):
-        queryset = Dish.objects.filter(id=self.id).annotate(dish_total_cost=Sum("ingredients__ingredient_cost")).values(
-            "dish_total_cost")
+        queryset = Dish.objects.filter(
+            id=self.id
+            ).annotate(
+            dish_total_cost=Sum("ingredients__ingredient_cost")
+            ).values(
+            "dish_total_cost"
+        )
         if queryset[0]["dish_total_cost"] is not None:
-
             return round(queryset[0]["dish_total_cost"], 2)
-
         else:
-            return 0
+            return "No ingredients"
 
