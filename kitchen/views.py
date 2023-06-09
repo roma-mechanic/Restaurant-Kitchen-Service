@@ -8,7 +8,7 @@ from kitchen.forms import SearchForm, CooksSearchForm, CookCreationForm
 from kitchen.models import Dish, DishType, Cook, Ingredients
 
 
-# @login_required
+@login_required
 def index(request):
     num_dish = Dish.objects.count()
     num_type_dish = DishType.objects.count()

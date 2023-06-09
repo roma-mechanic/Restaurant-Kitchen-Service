@@ -21,7 +21,7 @@ from .views import (
 )
 
 urlpatterns = [
-    path("home/", index, name="index"),
+    path("", index, name="index"),
     path("dish_type/",
          DishTypeListView.as_view(),
          name="dish-type-list"),
