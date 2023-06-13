@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-pwsvl#uoq(_4t1cn0se$@(d82mjdgxj#pqz*p)y3l=38p^&#^#"
 
 # Assets Management
-ASSETS_ROOT = '/static/assets'
+ASSETS_ROOT = "/static/assets"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
