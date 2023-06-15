@@ -18,11 +18,11 @@ Coded by www.creative-tim.com
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="{{ ASSETS_ROOT }}/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="{{ ASSETS_ROOT }}/img/favicon.png">
+  <link rel="icon" type="image/png" href="{{ ASSETS_ROOT }}/img/spoon and fork.png">
   <link rel="canonical" href="https://appseed.us/ui-kit/soft-ui-design-system"/>
   
   <title>
-    Django Soft UI Design System - {% block title %}{% endblock %} | AppSeed
+    Restaurant Kitchen Service
   </title>
 
   <!--     Fonts and icons     -->
@@ -37,12 +37,18 @@ Coded by www.creative-tim.com
   <link id="pagestyle" href="{{ ASSETS_ROOT }}/css/soft-design-system.css?v=1.0.1" rel="stylesheet" />
 
   <!-- Specific CSS goes HERE -->
-  {% block stylesheets %}{% endblock stylesheets %}
+  {% block stylesheets %}
+   <link href="{{ ASSETS_ROOT }}/css/styles.css" rel="stylesheet" />
+  {% endblock stylesheets %}
 
 </head>
 <body class="{% block body_class %}{% endblock body_class %}">
 
+    {% include "includes/navigation.html" %}
+
     {% block content %}{% endblock content %}
+
+
   
     {% include "includes/scripts.html" %}
 

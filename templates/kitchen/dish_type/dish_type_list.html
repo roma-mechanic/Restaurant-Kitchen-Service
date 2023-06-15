@@ -1,52 +1,82 @@
-{% extends "layouts/base.html" %}
+{% extends "layouts/base-fullscreen.html" %}
 {% load crispy_forms_filters %}
 
 {% block content %}
-  <h1>
-    Dish Type List
-    <a href="{% url "kitchen:dish-type-create" %}"  class="link_to_page btn btn-primary ">
-      Create
-    </a>
-  </h1>
 
-  <form action="" method="get" class="input-group mt-3">
-    {{ dish_type_search_form|crispy }}
-    <input  type="submit" class="btn btn-secondary search_button " value="🔍">
-  </form>
 
-  {% if dishtype_list %}
-    <table class="table">
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Update</th>
-        <th>Delete</th>
-      </tr>
+  <!-- -------- START HEADER 1 w/ text and image on right ------- -->
+  <!-------------image--------------------------------------------->
+  <header>
+    <div class="page-header section-height-100">
 
-      {% for dish_type in dishtype_list %}
-        <tr>
-          <td>
-            {{ dish_type.id }}
-          </td>
-          <td>
-            <a href="{% url 'kitchen:dish-type-detail' pk=dish_type.id %}">{{ dish_type.name }}</a>
-          </td>
-          <td>
-            <a href="{% url "kitchen:dish-type-update" pk=dish_type.id %}">
-              Update
-            </a>
-          </td>
-          <td>
-            <a style="color: red"
-               href="{% url "kitchen:dish-type-delete" pk=dish_type.id %}">
-              Delete
-            </a>
-          </td>
-        </tr>
-      {% endfor %}
-    </table>
+      <div class="oblique position-absolute top-0 h-100 d-md-block d-none">
+        <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"
+             style="background-image:url(/static/assets/img/restaurant/restaurant_5.jpg)"></div>
+      </div>
+      <!--------------Container ------------------------------>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
+            <h1 class="text-gradient text-primary">Dish Type List </h1>
+            <!--------------------Search form-------------------->
+            <form action="" method="get" class="input-group ">
+              {{ search_form|crispy }}
+              <input type="submit" class="btn btn-secondary search_button " value="🔍">
+              <!-------------------end search form-------------------->
+              <div class="buttons">
+                <button type="button" class="btn bg-gradient-info position-absolute top-0 end-0"><a
+                    href="{% url "kitchen:dish-type-create" %}">Create</a>
+                </button>
+              </div>
+            </form>
 
-  {% else %}
-    <p>There are no dish types in the service.</p>
-  {% endif %}
+            <!------------------Data table------------------>
+            <div>
+              {% if dishtype_list %}
+                <table class="table">
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                  </tr>
+
+                  {% for dish_type in dishtype_list %}
+                    <tr>
+                      <td>
+                        {{ dish_type.id }}
+                      </td>
+                      <td>
+                        <a href="{% url 'kitchen:dish-type-detail' pk=dish_type.id %}">{{ dish_type.name }}</a>
+                      </td>
+                      <td>
+                        <a href="{% url "kitchen:dish-type-update" pk=dish_type.id %}">
+                          Update
+                        </a>
+                      </td>
+                      <td>
+                        <a style="color: red"
+                           href="{% url "kitchen:dish-type-delete" pk=dish_type.id %}">
+                          Delete
+                        </a>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </table>
+              {% else %}
+                <p>There are no dish types in the service.</p>
+              {% endif %}
+            </div>
+ <!--------Pagination---->
+            {% block pagination %}
+              {% include "includes/pagination.html" %}
+            {% endblock %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 {% endblock %}
+<!-- -------- END HEADER 1 w/ text and image on right ------- -->
+
