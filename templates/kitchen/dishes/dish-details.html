@@ -1,37 +1,92 @@
-{% extends "layouts/base.html" %}
+{% extends "layouts/base-fullscreen.html" %}
+{% load crispy_forms_filters %}
 
 {% block content %}
-  <h1>
-    {{ dish.name }}
-    <a href="{% url 'kitchen:dish-delete' pk=dish.id %}" class="btn btn-danger link_to_page">
-      Delete
-    </a>
 
-    <a href="{% url 'kitchen:dish-update' pk=dish.id %}" class="btn btn-secondary link_to_page">
-      Update
-    </a>
-  </h1>
-  <hr>
-  <p><strong>Dish name:</strong> {{ dish.name }}</p>
-  <p><strong>Dish type:</strong> {{ dish.dish_type }}</p>
-  <p><strong>Cost:</strong> {{ dish.ingredient_total_cost }}</p>
-  {% for cook in dish.cooks.all %}
-    <p><strong>Cook:</strong> {{ cook }}</p>
-  {% endfor %}
-  <p><strong>Description:</strong> {{ dish.descriptions }}</p>
 
-  <h4>
-    Ingredients
-  </h4>
-  <hr>
-  {% if dish.ingredients.all %}
-    <ul>
-      {% for ingredient in dish.ingredients.all %}
-        <li>{{ ingredient }}   (cost {{ ingredient.ingredient_cost }})</li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p>Add ingredients in this dish</p>
-  {% endif %}
+  <!-- -------- START HEADER 1 w/ text and image on right ------- -->
+  <!-------------image--------------------------------------------->
+  <header>
+    <div class="page-header section-height-100">
 
+      <div class="oblique position-absolute top-0 h-100 d-md-block d-none">
+        <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"
+             style="background-image:url({{ ASSETS_ROOT }}/img/dishes/one_dish.jpg)"></div>
+      </div>
+      <!--------------Container ------------------------------>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
+            <h1 class="text-gradient text-primary">Dish Detail </h1>
+            <!------------------Data table------------------>
+            <h2><strong>Dish name:</strong> {{ dish.name }}
+              <div class="btn-group link_to_page">
+                <button type="button" class="btn bg-gradient-info "><a
+                    href="{% url 'kitchen:dish-update' pk=dish.id %}">update</a>
+                </button>
+                <button type="button" class="btn bg-gradient-primary"><a
+                    href="{% url 'kitchen:dish-delete' pk=dish.id %}">Delete</a>
+                </button>
+              </div>
+            </h2>
+            <p><strong>Dish type:</strong> {{ dish.dish_type }}</p>
+            <p><strong>Cost:</strong> {{ dish.ingredient_total_cost }}</p>
+            {% for cook in dish.cooks.all %}
+              <p><strong>Cook:</strong> {{ cook }}</p>
+            {% endfor %}
+            <p><strong>Description:</strong> {{ dish.descriptions }}</p>
+            <hr>
+            <h4>
+              Ingredients:
+            </h4>
+            {% if dish.ingredients.all %}
+              <ul>
+                {% for ingredient in dish.ingredients.all %}
+                  <li>{{ ingredient }}   (cost {{ ingredient.ingredient_cost }})</li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              <p>Add ingredients in this dish</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 {% endblock %}
+<!-- -------- END HEADER 1 w/ text and image on right ------- -->
+
+
+{#  <h1>#}
+{#    {{ dish.name }}#}
+{#    <a href="{% url 'kitchen:dish-delete' pk=dish.id %}" class="btn btn-danger link_to_page">#}
+{#      Delete#}
+{#    </a>#}
+{##}
+{#    <a href="{% url 'kitchen:dish-update' pk=dish.id %}" class="btn btn-secondary link_to_page">#}
+{#      Update#}
+{#    </a>#}
+{#  </h1>#}
+{#  <hr>#}
+{#  <p><strong>Dish name:</strong> {{ dish.name }}</p>#}
+{#  <p><strong>Dish type:</strong> {{ dish.dish_type }}</p>#}
+{#  <p><strong>Cost:</strong> {{ dish.ingredient_total_cost }}</p>#}
+{#  {% for cook in dish.cooks.all %}#}
+{#    <p><strong>Cook:</strong> {{ cook }}</p>#}
+{#  {% endfor %}#}
+{#  <p><strong>Description:</strong> {{ dish.descriptions }}</p>#}
+{##}
+{#  <h4>#}
+{#    Ingredients#}
+{#  </h4>#}
+{#  <hr>#}
+{#  {% if dish.ingredients.all %}#}
+{#    <ul>#}
+{#      {% for ingredient in dish.ingredients.all %}#}
+{#        <li>{{ ingredient }}   (cost {{ ingredient.ingredient_cost }})</li>#}
+{#      {% endfor %}#}
+{#    </ul>#}
+{#  {% else %}#}
+{#    <p>Add ingredients in this dish</p>#}
+{#  {% endif %}#}
+
