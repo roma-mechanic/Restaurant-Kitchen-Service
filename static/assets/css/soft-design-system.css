@@ -222,7 +222,8 @@ figure {
 
 img,
 svg {
-  vertical-align: middle; }
+  vertical-align: middle;
+  horiz-align: center; }
 
 table {
   caption-side: bottom;
