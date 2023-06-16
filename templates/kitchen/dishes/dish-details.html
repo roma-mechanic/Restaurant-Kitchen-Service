@@ -42,7 +42,7 @@
             {% if dish.ingredients.all %}
               <ul>
                 {% for ingredient in dish.ingredients.all %}
-                  <li>{{ ingredient }}   (cost {{ ingredient.ingredient_cost }})</li>
+                  <li>{{ ingredient }} (cost {{ ingredient.ingredient_cost }})</li>
                 {% endfor %}
               </ul>
             {% else %}
@@ -55,38 +55,3 @@
   </header>
 {% endblock %}
 <!-- -------- END HEADER 1 w/ text and image on right ------- -->
-
-
-{#  <h1>#}
-{#    {{ dish.name }}#}
-{#    <a href="{% url 'kitchen:dish-delete' pk=dish.id %}" class="btn btn-danger link_to_page">#}
-{#      Delete#}
-{#    </a>#}
-{##}
-{#    <a href="{% url 'kitchen:dish-update' pk=dish.id %}" class="btn btn-secondary link_to_page">#}
-{#      Update#}
-{#    </a>#}
-{#  </h1>#}
-{#  <hr>#}
-{#  <p><strong>Dish name:</strong> {{ dish.name }}</p>#}
-{#  <p><strong>Dish type:</strong> {{ dish.dish_type }}</p>#}
-{#  <p><strong>Cost:</strong> {{ dish.ingredient_total_cost }}</p>#}
-{#  {% for cook in dish.cooks.all %}#}
-{#    <p><strong>Cook:</strong> {{ cook }}</p>#}
-{#  {% endfor %}#}
-{#  <p><strong>Description:</strong> {{ dish.descriptions }}</p>#}
-{##}
-{#  <h4>#}
-{#    Ingredients#}
-{#  </h4>#}
-{#  <hr>#}
-{#  {% if dish.ingredients.all %}#}
-{#    <ul>#}
-{#      {% for ingredient in dish.ingredients.all %}#}
-{#        <li>{{ ingredient }}   (cost {{ ingredient.ingredient_cost }})</li>#}
-{#      {% endfor %}#}
-{#    </ul>#}
-{#  {% else %}#}
-{#    <p>Add ingredients in this dish</p>#}
-{#  {% endif %}#}
-

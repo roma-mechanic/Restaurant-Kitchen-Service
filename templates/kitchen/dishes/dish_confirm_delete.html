@@ -1,11 +1,35 @@
-{% extends "layouts/base.html" %}
+{% extends "layouts/base-fullscreen.html" %}
+{% load crispy_forms_filters %}
 
 {% block content %}
-  <h1>Delete dish  "{{ dish.name }}"?</h1>
-  <form action="" method="post">
-    {% csrf_token %}
 
-    <input type="submit" value="Yes" class="btn btn-danger">
-    <a href="{% url 'kitchen:dish-type-detail' pk=dishtype.id %}" class="btn btn-success cancel-link ">Cancel</a>
-  </form>
+
+  <!-- -------- START HEADER 1 w/ text and image on right ------- -->
+  <!-------------image--------------------------------------------->
+  <header>
+    <div class="page-header section-height-100">
+
+      <div class="oblique position-absolute top-0 h-100 d-md-block d-none">
+        <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"
+             style="background-image:url({{ ASSETS_ROOT }}/img/restaurant/delete-2.jpg)"></div>
+      </div>
+      <!--------------Container ------------------------------>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
+            <h1 class="text-gradient text-primary">Delete dish:</h1>
+            <h3>"{{ dish.name }}" ?</h3>
+            <!------------------Data table------------------>
+            <form action="" method="post">
+              {% csrf_token %}
+              <input type="submit" value="Yes" class="btn btn-danger">
+              <a href="{% url 'kitchen:dish-detail' pk=dish.id %}"
+                 class="btn btn-success cancel-link ">Cancel</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 {% endblock %}
+<!-- -------- END HEADER 1 w/ text and image on right ------- -->
