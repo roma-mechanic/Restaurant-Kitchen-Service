@@ -17,11 +17,19 @@
             {% endif %}
 
             <li class="page-item active">
-              <a class="page-link" href="javascript:;">{{ page_obj.number }}</a>
+              <a class="page-link">{{ page_obj.number }}</a>
             </li>
             {% if page_obj.has_next %}
               <li class="page-item">
-              <a class="page-link" href="javascript:;">{{ page_obj.next_page_number }}</a>
+              <a class="page-link">{{ page_obj.next_page_number }}</a>
+            {% endif %}
+            {% if page_obj.has_next %}
+              <li class="page-item">
+              <a class="page-link">>></a>
+            {% endif %}
+            {% if page_obj.has_next %}
+              <li class="page-item">
+              <a class="page-link" href="?{% query_transform request page=paginator.num_pages %}">{{ paginator.num_pages }}</a>
             {% endif %}
             {% if page_obj.has_next %}
               <li class="page-item">
