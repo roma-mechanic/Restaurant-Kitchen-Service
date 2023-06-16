@@ -1,53 +1,83 @@
-{% extends "layouts/base.html" %}
+{% extends "layouts/base-fullscreen.html" %}
 {% load crispy_forms_filters %}
 
 {% block content %}
-  <h1>
-    Dishes List
-    <a href="{% url "kitchen:dish-create" %}" class=" btn btn-primary link_to_page mt-2">
-      Create
-    </a>
-  </h1>
 
-  <form action="" method="get" class="input-group mt-3">
-    {{ dish_search_form|crispy }}
-    <input type="submit" class="btn btn-secondary search_button pb-0" value="🔍">
-  </form>
 
-  {% if dish_list %}
-    <table class="table">
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Cost</th>
-        <th>Description</th>
-        <th>Update</th>
-        <th>Delete</th>
-      </tr>
+  <!-- -------- START HEADER 1 w/ text and image on right ------- -->
+  <!-------------image--------------------------------------------->
+  <header>
+    <div class="page-header section-height-100">
 
-      {% for dish in dish_list %}
+      <div class="oblique position-absolute top-0 h-100 d-md-block d-none">
+        <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"
+             style="background-image:url({{ ASSETS_ROOT }}/img/dishes/dishes_1.jpg)"></div>
+      </div>
+      <!--------------Container ------------------------------>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
+            <h1 class="text-gradient text-primary">Dishes List </h1>
+            <!--------------------Search form-------------------->
+            <form action="" method="get" class="input-group ">
+              {{ dish_search_form|crispy }}
+              <input type="submit" class="btn btn-secondary search_button " value="🔍">
+              <!-------------------end search form-------------------->
+              <div class="buttons">
+                <button type="button" class="btn bg-gradient-info position-absolute top-o end-0">
+                  <a href="{% url "kitchen:dish-create" %}">Create</a>
+                </button>
+              </div>
+            </form>
 
-        <tr>
-          <td>{{ dish.id }}</td>
-          <td><a href="{% url 'kitchen:dish-detail' pk=dish.pk %}">{{ dish.name }}</a></td>
-          <td>{{ dish.ingredient_total_cost }}</td>
-          <td>{{ dish.descriptions }}</td>
-          <td>
-            <a href="{% url "kitchen:dish-update" pk=dish.id %}">
-              Update
-            </a>
-          </td>
-          <td>
-            <a style="color: red"
-               href="{% url "kitchen:dish-delete" pk=dish.id %}">
-              Delete
-            </a>
-          </td>
-        </tr>
-      {% endfor %}
-    </table>
+            <!------------------Data table------------------>
+            <div>
+              {% if dish_list %}
+                <table class="table">
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Cost</th>
+                    <th>Description</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                  </tr>
 
-  {% else %}
-    <p>There are no dish in the service.</p>
-  {% endif %}
+                  {% for dish in dish_list %}
+
+                    <tr>
+                      <td>{{ dish.id }}</td>
+                      <td><a href="{% url 'kitchen:dish-detail' pk=dish.pk %}">{{ dish.name }}</a></td>
+                      <td>{{ dish.ingredient_total_cost }}</td>
+                      <td>{{ dish.descriptions }}</td>
+                      <td>
+                        <a href="{% url "kitchen:dish-update" pk=dish.id %}">
+                          Update
+                        </a>
+                      </td>
+                      <td>
+                        <a style="color: red"
+                           href="{% url "kitchen:dish-delete" pk=dish.id %}">
+                          Delete
+                        </a>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </table>
+
+              {% else %}
+                <p>There are no dish in the service.</p>
+              {% endif %}
+            </div>
+            <!--------Pagination---->
+            {% block pagination %}
+              {% include "includes/pagination.html" %}
+            {% endblock %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 {% endblock %}
+<!-- -------- END HEADER 1 w/ text and image on right ------- -->
