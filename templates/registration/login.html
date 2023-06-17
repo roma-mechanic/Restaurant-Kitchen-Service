@@ -1,13 +1,65 @@
-{% extends "layouts/base.html" %}
+{% extends "layouts/base-fullscreen.html" %}
 {% load crispy_forms_filters %}
 
 {% block content %}
+
+
+  <!-- -------- START HEADER 1 w/ text and image on right ------- -->
+  <!-------------image--------------------------------------------->
+  <header>
+    <div class="page-header section-height-100">
+
+      <div class="oblique position-absolute top-0 h-100 d-md-block d-none">
+        <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"
+
+             style="background-image:url({{ ASSETS_ROOT }}/img/login.png);
+                     background-size: auto;
+                     background-repeat: no-repeat;
+                     background-position: center"></div>
+      </div>
+      <!--------------Container ------------------------------>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
+            <h1 class="text-gradient text-primary">Login!</h1>
+            <!------------------Data table------------------>
+            {% if form.errors %}
+              <p>Your username and password didn't match. Please try again.</p>
+            {% endif %}
+
+
+            {% if next %}
+              <p>Please login to see this page.</p>
+            {% endif %}
+
+            <form method="post" action="{% url 'login' %}">
+              {% csrf_token %}
+              {{ form|crispy }}
+
+              <input type="submit" value="Login" class="btn btn-primary" />
+              <input type="hidden" name="next" value="{{ next }}" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+{% endblock %}
+<!-- -------- END HEADER 1 w/ text and image on right ------- -->
+
+
+
+
+
+{#{% extends "layouts/base.html" %}#}
+{#{% load crispy_forms_filters %}#}
+{##}
+{#{% block content %}#}
 
 {% if form.errors %}
   <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
 
-<h1>Login</h1>
 
 {% if next %}
   <p>Please login to see this page.</p>
@@ -21,4 +73,3 @@
   <input type="hidden" name="next" value="{{ next }}" />
 </form>
 
-{% endblock %}
