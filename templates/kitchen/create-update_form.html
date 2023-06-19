@@ -26,15 +26,12 @@
             <h1 class="text-gradient text-primary">{{ object|yesno:"Update,Create" }}</h1>
             <h3>{{ object }}</h3>
             <!------------------Data table------------------>
-{#            <h1>{{ object|yesno:"Update,Create" }} {{ object }}</h1>#}
               <form action="" method="post" novalidate>
                 {% csrf_token %}
                 {{ form|crispy }}
 
                 <input type="submit" value="Submit" class="btn btn-primary">
               </form>
-{#              <a href="{% url 'kitchen:cook-detail' pk=cook.id %}"#}
-{#                 class="btn btn-success cancel-link ">Cancel</a>#}
           </div>
         </div>
       </div>
@@ -44,11 +41,3 @@
 <!-- -------- END HEADER 1 w/ text and image on right ------- -->
 
 
-
-{#  <h1>{{ object|yesno:"Update,Create" }} {{ object }}</h1>#}
-{#  <form action="" method="post" novalidate>#}
-{#    {% csrf_token %}#}
-{#    {{ form|crispy }}#}
-{##}
-{#    <input type="submit" value="Submit" class="btn btn-primary">#}
-{#  </form>#}
