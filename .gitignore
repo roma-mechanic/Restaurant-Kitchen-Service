@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-.idea/
-.vscode/
-*.iml
-.env
-.DS_Store
-venv/
-.pytest_cache/
-**__pycache__/
-db.sqlite3
-demo.db.json
-=======
+
 # Created by https://www.toptal.com/developers/gitignore/api/python,django,pycharm+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,django,pycharm+all
 
