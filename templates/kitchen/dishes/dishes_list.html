@@ -17,13 +17,21 @@
 
         </div>
       </div>
+<<<<<<< HEAD
+      <!--------------Container ------------------------------>
+=======
     <!---------------end image------------------------------>
       <!--------------container ------------------------------>
+>>>>>>> 572661531e0c18dc830dd66d02c7a5c1d6ad975b
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
             <h1 class="text-gradient text-primary">Dishes List </h1>
+<<<<<<< HEAD
+            <!--------------------Search form-------------------->
+=======
             <!--------------------search form-------------------->
+>>>>>>> 572661531e0c18dc830dd66d02c7a5c1d6ad975b
             <form action="" method="get" class="input-group ">
               {{ dish_search_form|crispy }}
               <input type="submit" class="btn btn-secondary search_button " value="🔍">
@@ -35,7 +43,11 @@
               </div>
             </form>
 
+<<<<<<< HEAD
+            <!------------------Data table------------------>
+=======
             <!------------------dynamic content------------------>
+>>>>>>> 572661531e0c18dc830dd66d02c7a5c1d6ad975b
             <div>
               {% if dish_list %}
                 <table class="table">
@@ -74,11 +86,19 @@
                 <p>There are no dish in the service.</p>
               {% endif %}
             </div>
+<<<<<<< HEAD
+            <!--------Pagination---->
+            {% block pagination %}
+              {% include "includes/pagination.html" %}
+            {% endblock %}
+
+=======
             <!--------pagination---->
             {% block pagination %}
               {% include "includes/pagination.html" %}
             {% endblock %}
             <!---------end pagination---------->
+>>>>>>> 572661531e0c18dc830dd66d02c7a5c1d6ad975b
           </div>
         </div>
       </div>
