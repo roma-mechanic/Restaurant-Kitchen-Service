@@ -142,19 +142,11 @@ class CookListView(LoginRequiredMixin, generic.ListView):
 
 class CookDetailView(LoginRequiredMixin, generic.DetailView):
     model = Cook
-<<<<<<< HEAD
-    # queryset = Cook.objects.all().prefetch_related("dish__cooks")
-=======
->>>>>>> 572661531e0c18dc830dd66d02c7a5c1d6ad975b
     template_name = "kitchen/cooks/cook_detail.html"
 
 
 class CookCreateView(LoginRequiredMixin, generic.CreateView):
     model = Cook
-<<<<<<< HEAD
-    # fields = "__all__"
-=======
->>>>>>> 572661531e0c18dc830dd66d02c7a5c1d6ad975b
     form_class = CookCreationForm
     template_name = "kitchen/create-update_form.html"
     success_url = reverse_lazy("kitchen:cooks-list")

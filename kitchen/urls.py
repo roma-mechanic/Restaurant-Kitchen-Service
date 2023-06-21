@@ -17,14 +17,10 @@ from .views import (
     CookUpdateView,
     CookDeleteView,
     DishCreateView,
-<<<<<<< HEAD
-    DishListView, DishUpdateView, DishDeleteView, DishDetailView
-=======
     DishListView,
     DishUpdateView,
     DishDeleteView,
     DishDetailView
->>>>>>> 572661531e0c18dc830dd66d02c7a5c1d6ad975b
 )
 
 urlpatterns = [
