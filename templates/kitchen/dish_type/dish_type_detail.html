@@ -1,0 +1,50 @@
+{% extends "layouts/base-fullscreen.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+
+
+  <!-- -------- START HEADER 1 w/ text and image on right ------- -->
+  <!-------------image--------------------------------------------->
+  <header>
+    <div class="page-header section-height-100">
+
+      <div class="oblique position-absolute top-0 h-100 d-md-block d-none">
+        <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"
+             style="background-image:url({{ ASSETS_ROOT }}/img/dishes/dishes_5.jpg)"></div>
+      </div>
+    <!--------------end image--------------------------->
+      <!--------------Container ------------------------------>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
+            <h1 class="text-gradient text-primary">Dish Type Detail </h1>
+            <!------------------dynamic content------------------>
+            <h2>Dish Type: {{ dishtype.name }}
+              <div class="btn-group link_to_page">
+                <button type="button" class="btn bg-gradient-info "><a
+                    href="{% url 'kitchen:dish-type-update' pk=dishtype.id %}">update</a>
+                </button>
+                <button type="button" class="btn bg-gradient-primary"><a
+                    href="{% url 'kitchen:dish-type-delete' pk=dishtype.id %}">Delete</a>
+                </button>
+              </div>
+            </h2>
+            <h3>Dishes:</h3>
+            {% if dishtype.dish_set.all %}
+              <ul>
+                {% for dish in dishtype.dish_set.all %}
+                  <li><a href="{% url 'kitchen:dish-detail' pk=dish.pk %}">{{ dish.name }}</a> ({{ dish.descriptions }})
+                  </li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              <p>There are no dishes in this dish type</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+{% endblock %}
+<!-- -------- END HEADER 1 w/ text and image on right ------- -->

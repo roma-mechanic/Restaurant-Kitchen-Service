@@ -1,0 +1,42 @@
+{% extends "layouts/base-fullscreen.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+
+
+  <!-- -------- START HEADER 1 w/ text and image on right ------- -->
+  <!-------------image--------------------------------------------->
+  <header>
+    <div class="page-header section-height-100">
+
+      <div class="oblique position-absolute top-0 h-100 d-md-block d-none">
+        <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"
+
+             style="background-image:url({{ ASSETS_ROOT }}/img/cooks/cook_14.png);
+                     background-repeat: no-repeat;
+                     background-position: center;
+                     background-size: auto">
+
+        </div>
+      </div>
+      <!--------------end image---------------------------->
+      <!--------------container ------------------------------>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
+            <h1 class="text-gradient text-primary">{{ object|yesno:"Update,Create" }}</h1>
+            <h3>{{ object }}</h3>
+            <!------------------dynamic content------------------>
+              <form action="" method="post" novalidate>
+                {% csrf_token %}
+                {{ form|crispy }}
+
+                <input type="submit" value="Submit" class="btn btn-primary">
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+{% endblock %}
+<!-- -------- END HEADER 1 w/ text and image on right ------- -->

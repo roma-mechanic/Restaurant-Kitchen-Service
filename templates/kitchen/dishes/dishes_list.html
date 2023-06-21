@@ -1,0 +1,88 @@
+{% extends "layouts/base-fullscreen.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+
+
+  <!-- -------- START HEADER 1 w/ text and image on right ------- -->
+  <!-------------image--------------------------------------------->
+  <header>
+    <div class="page-header section-height-100">
+
+      <div class="oblique position-absolute top-0 h-100 d-md-block d-none">
+        <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"
+             style="background-image:url({{ ASSETS_ROOT }}/img/dishes/dishes_1.jpg);
+                     background-position: center;
+                     ">
+
+        </div>
+      </div>
+    <!---------------end image------------------------------>
+      <!--------------container ------------------------------>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
+            <h1 class="text-gradient text-primary">Dishes List </h1>
+            <!--------------------search form-------------------->
+            <form action="" method="get" class="input-group ">
+              {{ dish_search_form|crispy }}
+              <input type="submit" class="btn btn-secondary search_button " value="🔍">
+              <!-------------------end search form-------------------->
+              <div class="buttons">
+                <button type="button" class="btn bg-gradient-info position-absolute top-o end-0">
+                  <a href="{% url "kitchen:dish-create" %}">Create</a>
+                </button>
+              </div>
+            </form>
+
+            <!------------------dynamic content------------------>
+            <div>
+              {% if dish_list %}
+                <table class="table">
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Cost</th>
+                    <th>Description</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                  </tr>
+
+                  {% for dish in dish_list %}
+
+                    <tr>
+                      <td>{{ dish.id }}</td>
+                      <td><a href="{% url 'kitchen:dish-detail' pk=dish.pk %}">{{ dish.name }}</a></td>
+                      <td>{{ dish.ingredient_total_cost }}</td>
+                      <td>{{ dish.descriptions }}</td>
+                      <td>
+                        <a href="{% url "kitchen:dish-update" pk=dish.id %}">
+                          Update
+                        </a>
+                      </td>
+                      <td>
+                        <a style="color: red"
+                           href="{% url "kitchen:dish-delete" pk=dish.id %}">
+                          Delete
+                        </a>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </table>
+
+              {% else %}
+                <p>There are no dish in the service.</p>
+              {% endif %}
+            </div>
+            <!--------pagination---->
+            {% block pagination %}
+              {% include "includes/pagination.html" %}
+            {% endblock %}
+            <!---------end pagination---------->
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+{% endblock %}
+<!-- -------- END HEADER 1 w/ text and image on right ------- -->

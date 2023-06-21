@@ -1,0 +1,1524 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2023-06-02T18:52:17.462Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "bread",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2023-06-02T18:52:46.760Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Pasta",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2023-06-02T18:52:59.403Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Pizza",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2023-06-02T18:53:15.761Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Desserts",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2023-06-02T18:54:05.306Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "braai",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2023-06-02T18:54:46.050Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Biscuits",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2023-06-02T18:55:16.145Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Soup",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2023-06-02T18:56:22.873Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Cakes",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2023-06-02T18:56:58.616Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "Borsch",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2023-06-02T18:57:39.482Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Varenyky",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2023-06-02T19:02:32.602Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "Ñabbage rolls",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2023-06-02T19:02:39.105Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "Ñabbage rolls",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2023-06-04T14:14:16.898Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "admin ( )",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Year of experience\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2023-06-06T15:38:09.656Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "admin (Firstname Lastname)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2023-06-06T15:41:06.532Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "Cheffcook (Cheff_cook_firstname Cheff_cook_lastname)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 6,
+    "codename": "add_cook"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 6,
+    "codename": "change_cook"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 6,
+    "codename": "delete_cook"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 6,
+    "codename": "view_cook"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add dish type",
+    "content_type": 7,
+    "codename": "add_dishtype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change dish type",
+    "content_type": 7,
+    "codename": "change_dishtype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete dish type",
+    "content_type": 7,
+    "codename": "delete_dishtype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view dish type",
+    "content_type": 7,
+    "codename": "view_dishtype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add ingredients",
+    "content_type": 8,
+    "codename": "add_ingredients"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change ingredients",
+    "content_type": 8,
+    "codename": "change_ingredients"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete ingredients",
+    "content_type": 8,
+    "codename": "delete_ingredients"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view ingredients",
+    "content_type": 8,
+    "codename": "view_ingredients"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add dish",
+    "content_type": 9,
+    "codename": "add_dish"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change dish",
+    "content_type": 9,
+    "codename": "change_dish"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete dish",
+    "content_type": 9,
+    "codename": "delete_dish"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view dish",
+    "content_type": 9,
+    "codename": "view_dish"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "kitchen",
+    "model": "cook"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "kitchen",
+    "model": "dishtype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "kitchen",
+    "model": "ingredients"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "kitchen",
+    "model": "dish"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "bkjdahzjfm2v0dhow481h96pwnrvtqpn",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-xfZS0nMGy59dHEC2FCcV4u4QKQW0b2bei4W4rTVsA5cwF3Zmkp1-txTzA9sOyj22W-e5t3WZE98VftDBr73g83K4fwc1jvqtjXJC6ozgElEGE5OzxZMpyiYDwqLH5IRGa8FOSnottSNFEIGgTD6z9wfc2Teb:1q5Aa5:FUPielYmZP7sRq4ykb_K7Zwt1VuVGm3xK7AIA_N1Nik",
+    "expire_date": "2023-06-16T19:37:01.946Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "cqpqe6q7d8sf2phgb12u25muroo8s7m7",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-xfZS0nMGy59dHEC2FCcV4u4QKQW0b2bei4W4rTVsA5cwF3Zmkp1-txTzA9sOyj22W-e5t3WZE98VftDBr73g83K4fwc1jvqtjXJC6ozgElEGE5OzxZMpyiYDwqLH5IRGa8FOSnottSNFEIGgTD6z9wfc2Teb:1q9gut:KygOVgZV3AHv-4Bwrc8niVUxedHu636G6ZVuYg3ug4Y",
+    "expire_date": "2023-06-29T06:57:11.041Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "f26rwstvhyxv5vrml0attlal8s8ds5wv",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-xfZS0nMGy59dHEC2FCcV4u4QKQW0b2bei4W4rTVsA5cwF3Zmkp1-txTzA9sOyj22W-e5t3WZE98VftDBr73g83K4fwc1jvqtjXJC6ozgElEGE5OzxZMpyiYDwqLH5IRGa8FOSnottSNFEIGgTD6z9wfc2Teb:1q7db3:kUjq1dSVCeEEtUIavtTVKkrmJ-GVHAVBYo348yw7dAQ",
+    "expire_date": "2023-06-23T15:00:13.050Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hgr32x4hz0ftswye5pq94org9ff7zs1c",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-xfZS0nMGy59dHEC2FCcV4u4QKQW0b2bei4W4rTVsA5cwF3Zmkp1-txTzA9sOyj22W-e5t3WZE98VftDBr73g83K4fwc1jvqtjXJC6ozgElEGE5OzxZMpyiYDwqLH5IRGa8FOSnottSNFEIGgTD6z9wfc2Teb:1q5oTx:atYjQ-pXElPNjqnalS6Ma5RyYpL8Wkznk3_G2_mPs1I",
+    "expire_date": "2023-06-18T14:13:21.490Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "jkudn1h6ijxo3sgn2ul817qm7mt99bww",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-xfZS0nMGy59dHEC2FCcV4u4QKQW0b2bei4W4rTVsA5cwF3Zmkp1-txTzA9sOyj22W-e5t3WZE98VftDBr73g83K4fwc1jvqtjXJC6ozgElEGE5OzxZMpyiYDwqLH5IRGa8FOSnottSNFEIGgTD6z9wfc2Teb:1q9NbJ:efG8zDrofPGSSeJh7DVzdHzewwKIGupHFvrseGsip4U",
+    "expire_date": "2023-06-28T10:19:41.987Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "s3gt62sl1hxg7iohlpfofqetjs7nl5uo",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-xfZS0nMGy59dHEC2FCcV4u4QKQW0b2bei4W4rTVsA5cwF3Zmkp1-txTzA9sOyj22W-e5t3WZE98VftDBr73g83K4fwc1jvqtjXJC6ozgElEGE5OzxZMpyiYDwqLH5IRGa8FOSnottSNFEIGgTD6z9wfc2Teb:1q69JY:X5bj-8-yicDfBgnySQ2SvAK5-CMUA4o6hpVqa-FdhVo",
+    "expire_date": "2023-06-19T12:28:00.310Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "u5b0asgmhkimpk7cilwadsprfof7n196",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-xfZS0nMGy59dHEC2FCcV4u4QKQW0b2bei4W4rTVsA5cwF3Zmkp1-txTzA9sOyj22W-e5t3WZE98VftDBr73g83K4fwc1jvqtjXJC6ozgElEGE5OzxZMpyiYDwqLH5IRGa8FOSnottSNFEIGgTD6z9wfc2Teb:1q6Yjq:0WpRzcStRz9l9a5XbbAT-KrZ_Q5oxEYMRuHkqJ1PZhQ",
+    "expire_date": "2023-06-20T15:36:50.791Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "u7pyaavwbzl3dzyntc2sa3riga4g4s9x",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-xfZS0nMGy59dHEC2FCcV4u4QKQW0b2bei4W4rTVsA5cwF3Zmkp1-txTzA9sOyj22W-e5t3WZE98VftDBr73g83K4fwc1jvqtjXJC6ozgElEGE5OzxZMpyiYDwqLH5IRGa8FOSnottSNFEIGgTD6z9wfc2Teb:1q59p0:7wBmHz9PumNCBGEHNGRhzFsiuOBZVPIaN7pASuexN2I",
+    "expire_date": "2023-06-16T18:48:22.818Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "y8hzr47iemkq7qmy3022q7kfo8iknqtr",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-xfZS0nMGy59dHEC2FCcV4u4QKQW0b2bei4W4rTVsA5cwF3Zmkp1-txTzA9sOyj22W-e5t3WZE98VftDBr73g83K4fwc1jvqtjXJC6ozgElEGE5OzxZMpyiYDwqLH5IRGa8FOSnottSNFEIGgTD6z9wfc2Teb:1q7wgO:Y4BtQDcB7g4I6YoS-AHMHkcCMHfAi2ZSHKdU6uy1vyc",
+    "expire_date": "2023-06-24T11:23:00.421Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ygnbe8p0b1t4h65x6ujfo855fqub4vqn",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-xfZS0nMGy59dHEC2FCcV4u4QKQW0b2bei4W4rTVsA5cwF3Zmkp1-txTzA9sOyj22W-e5t3WZE98VftDBr73g83K4fwc1jvqtjXJC6ozgElEGE5OzxZMpyiYDwqLH5IRGa8FOSnottSNFEIGgTD6z9wfc2Teb:1qAWGe:3c_qv0PyKxOhZxTQtMgmhpaVSaWDmEs6rdeIYQolV2s",
+    "expire_date": "2023-07-01T13:47:04.944Z"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 1,
+  "fields": {
+    "name": "bread"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 2,
+  "fields": {
+    "name": "Pasta"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 3,
+  "fields": {
+    "name": "Pizza"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 4,
+  "fields": {
+    "name": "Desserts"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 5,
+  "fields": {
+    "name": "braai"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 6,
+  "fields": {
+    "name": "Biscuits"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 7,
+  "fields": {
+    "name": "Soup"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 8,
+  "fields": {
+    "name": "Cakes"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 9,
+  "fields": {
+    "name": "Borsch"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 10,
+  "fields": {
+    "name": "Varenyky"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 11,
+  "fields": {
+    "name": "Ñabbage rolls"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 1,
+  "fields": {
+    "name": "flour",
+    "ingredient_cost": "1.24"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 2,
+  "fields": {
+    "name": "potato",
+    "ingredient_cost": "0.50"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 3,
+  "fields": {
+    "name": "tomato",
+    "ingredient_cost": "0.80"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 4,
+  "fields": {
+    "name": "onion",
+    "ingredient_cost": "0.30"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 5,
+  "fields": {
+    "name": "salt",
+    "ingredient_cost": "0.20"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 6,
+  "fields": {
+    "name": "sugar",
+    "ingredient_cost": "0.90"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 7,
+  "fields": {
+    "name": "chocolate",
+    "ingredient_cost": "10.35"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 8,
+  "fields": {
+    "name": "beet",
+    "ingredient_cost": "0.50"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 9,
+  "fields": {
+    "name": "sour cream",
+    "ingredient_cost": "2.50"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 10,
+  "fields": {
+    "name": "milk",
+    "ingredient_cost": "1.36"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 11,
+  "fields": {
+    "name": "butter",
+    "ingredient_cost": "2.64"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 12,
+  "fields": {
+    "name": "cottage cheese",
+    "ingredient_cost": "2.41"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 13,
+  "fields": {
+    "name": "cheese",
+    "ingredient_cost": "3.26"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 14,
+  "fields": {
+    "name": "meat",
+    "ingredient_cost": "6.31"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 15,
+  "fields": {
+    "name": "rice",
+    "ingredient_cost": "1.23"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 16,
+  "fields": {
+    "name": "cabbage",
+    "ingredient_cost": "1.56"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 17,
+  "fields": {
+    "name": "carrot",
+    "ingredient_cost": "1.89"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 18,
+  "fields": {
+    "name": "buckwheat",
+    "ingredient_cost": "4.56"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 19,
+  "fields": {
+    "name": "bread",
+    "ingredient_cost": "1.45"
+  }
+},
+{
+  "model": "kitchen.ingredients",
+  "pk": 20,
+  "fields": {
+    "name": "pepper",
+    "ingredient_cost": "4.58"
+  }
+},
+{
+  "model": "kitchen.cook",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$xolVoXwPvUzyCQf9YUZMTh$FA+DzgYZO6CeYSVWi4dkzsztlEwl/y2OB9ajvQKWI+A=",
+    "last_login": "2023-06-17T13:47:04.938Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Firstname",
+    "last_name": "Lastname",
+    "email": "admin@admin.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-06-02T18:47:27Z",
+    "year_of_experience": 5,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "kitchen.cook",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$9rMoy982PKKmNAncqNbJrd$D92mMMmbphhV3BJkA90kv45/UY7ea9twZUJgKvY45xA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Cheffcook",
+    "first_name": "Cheff_cook_firstname",
+    "last_name": "Cheff_cook_lastname",
+    "email": "cheff@cheff.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-06-06T15:41:06Z",
+    "year_of_experience": 10,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "kitchen.cook",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$ceKtdlUXaiQwnQNJMNdghn$0qhEagwfFe4sVle0aGNT7zqgz7qfRYTHDH8HSw7WEAI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Test_cook",
+    "first_name": "Test_cook_first_name",
+    "last_name": "Test_cook_last_name",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-06-06T17:43:42.680Z",
+    "year_of_experience": 4,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 1,
+  "fields": {
+    "name": "Ukrainian borscht recipe 1",
+    "descriptions": "Description 1",
+    "dish_type": 9,
+    "cooks": [
+      2,
+      3
+    ],
+    "ingredients": [
+      13,
+      7,
+      1,
+      14,
+      20,
+      2,
+      9
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 2,
+  "fields": {
+    "name": "Ukrainian borscht recipe 2",
+    "descriptions": "description 2",
+    "dish_type": 9,
+    "cooks": [
+      1
+    ],
+    "ingredients": [
+      8,
+      19,
+      18,
+      11
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 3,
+  "fields": {
+    "name": "Ukrainian borscht recipe 3",
+    "descriptions": "description 3",
+    "dish_type": 9,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 4,
+  "fields": {
+    "name": "Ukrainian borscht recipe 4",
+    "descriptions": "description 4",
+    "dish_type": 9,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 5,
+  "fields": {
+    "name": "Ukrainian borscht recipe 5",
+    "descriptions": "description 5",
+    "dish_type": 9,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 6,
+  "fields": {
+    "name": "Ukrainian borscht recipe 6",
+    "descriptions": "description 6",
+    "dish_type": 9,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 7,
+  "fields": {
+    "name": "Ukrainian borscht recipe 7",
+    "descriptions": "description 7",
+    "dish_type": 9,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 8,
+  "fields": {
+    "name": "Ukrainian borscht recipe 8",
+    "descriptions": "description 8",
+    "dish_type": 9,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 9,
+  "fields": {
+    "name": "Ukrainian borscht recipe 9",
+    "descriptions": "description 9",
+    "dish_type": 9,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 10,
+  "fields": {
+    "name": "Pasta recipe 1",
+    "descriptions": "description 1",
+    "dish_type": 2,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 11,
+  "fields": {
+    "name": "Pasta recipe 2",
+    "descriptions": "description 2",
+    "dish_type": 2,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 12,
+  "fields": {
+    "name": "Pasta recipe 3",
+    "descriptions": "description 3",
+    "dish_type": 2,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 13,
+  "fields": {
+    "name": "Pasta recipe 4",
+    "descriptions": "description 4",
+    "dish_type": 2,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 14,
+  "fields": {
+    "name": "Pasta recipe 5",
+    "descriptions": "description 5",
+    "dish_type": 2,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 15,
+  "fields": {
+    "name": "Pasta recipe 6",
+    "descriptions": "description 6",
+    "dish_type": 2,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 16,
+  "fields": {
+    "name": "Pasta recipe 7",
+    "descriptions": "description 7",
+    "dish_type": 2,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 17,
+  "fields": {
+    "name": "Pasta recipe 8",
+    "descriptions": "description 8",
+    "dish_type": 2,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 18,
+  "fields": {
+    "name": "Pasta recipe 9",
+    "descriptions": "description 9",
+    "dish_type": 2,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 19,
+  "fields": {
+    "name": "Pasta recipe 10",
+    "descriptions": "description 10",
+    "dish_type": 2,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 20,
+  "fields": {
+    "name": "Pizza recipe 1",
+    "descriptions": "description 1",
+    "dish_type": 3,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 21,
+  "fields": {
+    "name": "Pizza recipe 2",
+    "descriptions": "description 2",
+    "dish_type": 3,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 22,
+  "fields": {
+    "name": "Pizza recipe 3",
+    "descriptions": "description 3",
+    "dish_type": 3,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 23,
+  "fields": {
+    "name": "Pizza recipe 4",
+    "descriptions": "description 4",
+    "dish_type": 3,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 24,
+  "fields": {
+    "name": "Pizza recipe 5",
+    "descriptions": "description 5",
+    "dish_type": 3,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 25,
+  "fields": {
+    "name": "Pizza recipe 6",
+    "descriptions": "description 6",
+    "dish_type": 3,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 26,
+  "fields": {
+    "name": "Pizza recipe 7",
+    "descriptions": "description 7",
+    "dish_type": 3,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 27,
+  "fields": {
+    "name": "Pizza recipe 8",
+    "descriptions": "description 8",
+    "dish_type": 3,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 28,
+  "fields": {
+    "name": "Pizza recipe 9",
+    "descriptions": "description 9",
+    "dish_type": 3,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 29,
+  "fields": {
+    "name": "Pizza recipe 10",
+    "descriptions": "description 10",
+    "dish_type": 3,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 30,
+  "fields": {
+    "name": "Varenyky recipe 1",
+    "descriptions": "description 1",
+    "dish_type": 10,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 31,
+  "fields": {
+    "name": "Varenyky recipe 2",
+    "descriptions": "description 2",
+    "dish_type": 10,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 32,
+  "fields": {
+    "name": "Varenyky recipe 3",
+    "descriptions": "description 3",
+    "dish_type": 10,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 33,
+  "fields": {
+    "name": "Varenyky recipe 4",
+    "descriptions": "description 4",
+    "dish_type": 10,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 34,
+  "fields": {
+    "name": "Varenyky recipe 5",
+    "descriptions": "description 5",
+    "dish_type": 10,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 35,
+  "fields": {
+    "name": "Varenyky recipe 6",
+    "descriptions": "description 6",
+    "dish_type": 10,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 36,
+  "fields": {
+    "name": "Varenyky recipe 7",
+    "descriptions": "description 7",
+    "dish_type": 10,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 37,
+  "fields": {
+    "name": "Varenyky recipe 8",
+    "descriptions": "description 8",
+    "dish_type": 10,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 38,
+  "fields": {
+    "name": "Varenyky recipe 9",
+    "descriptions": "description 9",
+    "dish_type": 10,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 39,
+  "fields": {
+    "name": "Varenyky recipe 10",
+    "descriptions": "description 10",
+    "dish_type": 10,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 40,
+  "fields": {
+    "name": "Dessert recipe 1",
+    "descriptions": "description 1",
+    "dish_type": 4,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 41,
+  "fields": {
+    "name": "Dessert recipe 2",
+    "descriptions": "description 2",
+    "dish_type": 4,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 42,
+  "fields": {
+    "name": "Dessert recipe 3",
+    "descriptions": "description 3",
+    "dish_type": 4,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 43,
+  "fields": {
+    "name": "Dessert recipe 4",
+    "descriptions": "description 4",
+    "dish_type": 4,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 44,
+  "fields": {
+    "name": "Dessert recipe 5",
+    "descriptions": "description 5",
+    "dish_type": 4,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 45,
+  "fields": {
+    "name": "Dessert recipe 6",
+    "descriptions": "description 6",
+    "dish_type": 4,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 46,
+  "fields": {
+    "name": "Dessert recipe 7",
+    "descriptions": "description 7",
+    "dish_type": 4,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 47,
+  "fields": {
+    "name": "Dessert recipe 8",
+    "descriptions": "description 8",
+    "dish_type": 4,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 48,
+  "fields": {
+    "name": "Dessert recipe 9",
+    "descriptions": "description 9",
+    "dish_type": 4,
+    "cooks": [],
+    "ingredients": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 49,
+  "fields": {
+    "name": "Dessert recipe 10",
+    "descriptions": "description 10",
+    "dish_type": 4,
+    "cooks": [],
+    "ingredients": []
+  }
+}
+]

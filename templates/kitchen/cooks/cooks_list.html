@@ -1,0 +1,84 @@
+{% extends "layouts/base-fullscreen.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+
+
+  <!-- -------- START HEADER 1 w/ text and image on right ------- -->
+  <!-------------image--------------------------------------------->
+  <header>
+    <div class="page-header section-height-100">
+
+      <div class="oblique position-absolute top-0 h-100 d-md-block d-none">
+        <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"
+             style="background-image:url({{ ASSETS_ROOT }}/img/cooks/cook_3.jpg);
+                     background-position: center">
+        </div>
+      </div>
+      <!------------end image------------------------->
+      <!--------------Container ------------------------------>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
+            <h1 class="text-gradient text-primary">Cooks List </h1>
+            <!--------------------Search form-------------------->
+            <form action="" method="get" class="input-group ">
+              {{ cooks_search_form|crispy }}
+              <input type="submit" class="btn btn-secondary search_button " value="🔍">
+              <!-------------------end search form-------------------->
+              <div class="buttons">
+                <button type="button" class="btn bg-gradient-info position-absolute top-0 end-0"><a
+                    href="{% url "kitchen:cook-create" %}">Create</a>
+                </button>
+              </div>
+            </form>
+
+            <!------------------dynamic content------------------>
+            <div>
+              {% if cook_list %}
+                <table class="table">
+                  <tr>
+                    <th>ID</th>
+                    <th>Cook username</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Year of experience</th>
+                  </tr>
+
+                  {% for cook in cook_list %}
+                    <tr>
+                      <td>
+                        {{ cook.id }}
+                      </td>
+                      <td>
+                        <a href="{% url 'kitchen:cook-detail' pk=cook.id %}">{{ cook.username }}</a>
+                      </td>
+                      <td>
+                        {{ cook.first_name }}
+                      </td>
+                      <td>
+                        {{ cook.last_name }}
+                      </td>
+                      <td>
+                        {{ cook.year_of_experience }}
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </table>
+
+              {% else %}
+                <p>There are no dish types in the service.</p>
+              {% endif %}
+            </div>
+            <!--------pagination---->
+            {% block pagination %}
+              {% include "includes/pagination.html" %}
+            {% endblock %}
+            <!-----end pagination------>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+{% endblock %}
+<!-- -------- END HEADER 1 w/ text and image on right ------- -->
