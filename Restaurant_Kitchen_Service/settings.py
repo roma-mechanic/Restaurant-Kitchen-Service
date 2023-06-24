@@ -14,6 +14,10 @@ from pathlib import Path
 
 import dj_database_url
 
+from dotenv import load_dotenv
+load_dotenv()
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("DJANG0_SECRET_KEY", "django-insecure-pwsvl#uoq(_4t1cn0se$@(d82mjdgxj#pqz*p)y3l=38p^&#^#")
+SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 
 # Assets Management
 
@@ -145,7 +149,7 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-ASSETS_ROOT = os.getenv('ASSETS_ROOT', '/static/assets')
+ASSETS_ROOT = os.getenv('ASSETS_ROOT', '/static/assets/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
