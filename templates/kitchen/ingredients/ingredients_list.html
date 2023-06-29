@@ -13,7 +13,8 @@
         <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"
              style="background-image:url({{ ASSETS_ROOT }}/img/ingredients/ingredients_1.jpg)"></div>
       </div>
-      <!--------------Container ------------------------------>
+      <!------------end image--------------------->
+      <!--------------container ------------------------------>
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
@@ -30,7 +31,7 @@
               </div>
             </form>
 
-            <!------------------Data table------------------>
+            <!------------------dynamic content------------------>
             <div>
               {% if ingredients_list %}
                 <table class="table">
@@ -72,15 +73,15 @@
                 <p>There are no ingredients in the service.</p>
               {% endif %}
             </div>
- <!--------Pagination---->
+            <!--------pagination---->
             {% block pagination %}
               {% include "includes/pagination.html" %}
             {% endblock %}
-
+            <!------end pagination---->
           </div>
         </div>
       </div>
     </div>
   </header>
 {% endblock %}
-<!-- -------- END HEADER 1 w/ text and image on right ------- -->
+<!-- -------- END HEADER 1 w, container, dynamic content/ text and image on right ------- -->

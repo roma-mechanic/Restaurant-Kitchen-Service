@@ -137,7 +137,7 @@
     "user": 1,
     "content_type": 7,
     "object_id": "11",
-    "object_repr": "Ñabbage rolls",
+    "object_repr": "Ð¡abbage rolls",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -150,7 +150,7 @@
     "user": 1,
     "content_type": 7,
     "object_id": "11",
-    "object_repr": "Ñabbage rolls",
+    "object_repr": "Ð¡abbage rolls",
     "action_flag": 2,
     "change_message": "[]"
   }
@@ -592,6 +592,22 @@
 },
 {
   "model": "sessions.session",
+  "pk": "9j3fugzcapz6lj7htoxfnvdnsxuwmu6x",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pBpgQIu3XsGMjBTqRpISrsy3l1JutDl_-_lvUTAfcthb7yGhcRZDOL0-0VMDy4d0B3LrcpUy7YuUXZFHrTJayV-Xg73L5Cx5Z6lwStgTmCSHaMxjs1k9WQ0JiSVtIfvJK3J8QgKrIVZzdExa8Ueonh_AM5mN3I:1qDTvB:LrzgsI401AjEcJtfhvKKF7XcJI0CK-VN3s53ASeOOUE",
+    "expire_date": "2023-07-09T17:53:09.535Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "b3klp29w88cgn96gvm1rws6y2x40tgd2",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pBpgQIu3XsGMjBTqRpISrsy3l1JutDl_-_lvUTAfcthb7yGhcRZDOL0-0VMDy4d0B3LrcpUy7YuUXZFHrTJayV-Xg73L5Cx5Z6lwStgTmCSHaMxjs1k9WQ0JiSVtIfvJK3J8QgKrIVZzdExa8Ueonh_AM5mN3I:1qCzt8:nrrUA_GAcPCscnnATgXew_FrLwARi8ghE2NCzffqKvQ",
+    "expire_date": "2023-07-08T09:49:02.753Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "bkjdahzjfm2v0dhow481h96pwnrvtqpn",
   "fields": {
     "session_data": ".eJxVjDsOwjAQBe_iGln-xfZS0nMGy59dHEC2FCcV4u4QKQW0b2bei4W4rTVsA5cwF3Zmkp1-txTzA9sOyj22W-e5t3WZE98VftDBr73g83K4fwc1jvqtjXJC6ozgElEGE5OzxZMpyiYDwqLH5IRGa8FOSnottSNFEIGgTD6z9wfc2Teb:1q5Aa5:FUPielYmZP7sRq4ykb_K7Zwt1VuVGm3xK7AIA_N1Nik",
@@ -624,10 +640,26 @@
 },
 {
   "model": "sessions.session",
+  "pk": "hwoq469zqwoijw4yidkyc351x001n95c",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pBpgQIu3XsGMjBTqRpISrsy3l1JutDl_-_lvUTAfcthb7yGhcRZDOL0-0VMDy4d0B3LrcpUy7YuUXZFHrTJayV-Xg73L5Cx5Z6lwStgTmCSHaMxjs1k9WQ0JiSVtIfvJK3J8QgKrIVZzdExa8Ueonh_AM5mN3I:1qDlyJ:Wga9X1cBh6SM0ZmUTC0RyMfRSAqCSKnRfdyxnoS6-9k",
+    "expire_date": "2023-07-10T13:09:35.368Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "jkudn1h6ijxo3sgn2ul817qm7mt99bww",
   "fields": {
     "session_data": ".eJxVjDsOwjAQBe_iGln-xfZS0nMGy59dHEC2FCcV4u4QKQW0b2bei4W4rTVsA5cwF3Zmkp1-txTzA9sOyj22W-e5t3WZE98VftDBr73g83K4fwc1jvqtjXJC6ozgElEGE5OzxZMpyiYDwqLH5IRGa8FOSnottSNFEIGgTD6z9wfc2Teb:1q9NbJ:efG8zDrofPGSSeJh7DVzdHzewwKIGupHFvrseGsip4U",
     "expire_date": "2023-06-28T10:19:41.987Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "jymq17ew9q9ko54njc3q8slw0v25s8jh",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pBpgQIu3XsGMjBTqRpISrsy3l1JutDl_-_lvUTAfcthb7yGhcRZDOL0-0VMDy4d0B3LrcpUy7YuUXZFHrTJayV-Xg73L5Cx5Z6lwStgTmCSHaMxjs1k9WQ0JiSVtIfvJK3J8QgKrIVZzdExa8Ueonh_AM5mN3I:1qD6KZ:fiJvDUEWICvwZQjTROGy8ri3DyAx0ItN25qPdN2R8VE",
+    "expire_date": "2023-07-08T16:41:47.604Z"
   }
 },
 {
@@ -656,18 +688,18 @@
 },
 {
   "model": "sessions.session",
-  "pk": "y8hzr47iemkq7qmy3022q7kfo8iknqtr",
+  "pk": "uzbvwbq8k7fq9qouywkencrj6f4rdyg8",
   "fields": {
-    "session_data": ".eJxVjDsOwjAQBe_iGln-xfZS0nMGy59dHEC2FCcV4u4QKQW0b2bei4W4rTVsA5cwF3Zmkp1-txTzA9sOyj22W-e5t3WZE98VftDBr73g83K4fwc1jvqtjXJC6ozgElEGE5OzxZMpyiYDwqLH5IRGa8FOSnottSNFEIGgTD6z9wfc2Teb:1q7wgO:Y4BtQDcB7g4I6YoS-AHMHkcCMHfAi2ZSHKdU6uy1vyc",
-    "expire_date": "2023-06-24T11:23:00.421Z"
+    "session_data": ".eJxVjDsOwjAQBe_iGln-xfZS0nMGy59dHEC2FCcV4u4QKQW0b2bei4W4rTVsA5cwF3Zmkp1-txTzA9sOyj22W-e5t3WZE98VftDBr73g83K4fwc1jvqtjXJC6ozgElEGE5OzxZMpyiYDwqLH5IRGa8FOSnottSNFEIGgTD6z9wfc2Teb:1qCOa5:ZlYDVAwS0Z2QsoHa8cT64N3neK-osErpEqInfWA0e5s",
+    "expire_date": "2023-07-06T17:58:53.939Z"
   }
 },
 {
   "model": "sessions.session",
-  "pk": "ygnbe8p0b1t4h65x6ujfo855fqub4vqn",
+  "pk": "y8hzr47iemkq7qmy3022q7kfo8iknqtr",
   "fields": {
-    "session_data": ".eJxVjDsOwjAQBe_iGln-xfZS0nMGy59dHEC2FCcV4u4QKQW0b2bei4W4rTVsA5cwF3Zmkp1-txTzA9sOyj22W-e5t3WZE98VftDBr73g83K4fwc1jvqtjXJC6ozgElEGE5OzxZMpyiYDwqLH5IRGa8FOSnottSNFEIGgTD6z9wfc2Teb:1qAWGe:3c_qv0PyKxOhZxTQtMgmhpaVSaWDmEs6rdeIYQolV2s",
-    "expire_date": "2023-07-01T13:47:04.944Z"
+    "session_data": ".eJxVjDsOwjAQBe_iGln-xfZS0nMGy59dHEC2FCcV4u4QKQW0b2bei4W4rTVsA5cwF3Zmkp1-txTzA9sOyj22W-e5t3WZE98VftDBr73g83K4fwc1jvqtjXJC6ozgElEGE5OzxZMpyiYDwqLH5IRGa8FOSnottSNFEIGgTD6z9wfc2Teb:1q7wgO:Y4BtQDcB7g4I6YoS-AHMHkcCMHfAi2ZSHKdU6uy1vyc",
+    "expire_date": "2023-06-24T11:23:00.421Z"
   }
 },
 {
@@ -744,7 +776,7 @@
   "model": "kitchen.dishtype",
   "pk": 11,
   "fields": {
-    "name": "Ñabbage rolls"
+    "name": "Ð¡abbage rolls"
   }
 },
 {
@@ -912,7 +944,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$600000$xolVoXwPvUzyCQf9YUZMTh$FA+DzgYZO6CeYSVWi4dkzsztlEwl/y2OB9ajvQKWI+A=",
-    "last_login": "2023-06-17T13:47:04.938Z",
+    "last_login": "2023-06-26T13:09:35.363Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "Firstname",
@@ -960,6 +992,25 @@
     "is_active": true,
     "date_joined": "2023-06-06T17:43:42.680Z",
     "year_of_experience": 4,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "kitchen.cook",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$X5bXmF91HUFJqrtQy3WLxu$84R7V8sVNwdkvLVYrH+WUDjZKMpFVpazwLbYtYIGZeI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Mastercook",
+    "first_name": "Casey",
+    "last_name": "Ryback",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-06-20T14:52:26.814Z",
+    "year_of_experience": 10,
     "groups": [],
     "user_permissions": []
   }
